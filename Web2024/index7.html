@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="text/html">
+<title></title>
+<style>
+.mycss {
+    color: rgba(255, 255, 255, 0.925);
+    padding: 0.5em auto 0.5em;
+}
+table {
+    color: rgb(0, 0, 0);
+    border: 1px double;
+}
+th {
+    background-color: rgb(182, 182, 182);
+    border: 3px solid rgb(0, 0, 0);
+}
+td {
+    border: 3px solid rgb(0, 0, 0);
+}
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr>
+<th>學號</th>
+<th>姓名</th>
+<th>國文</th>
+<th>英文</th>
+<th>數學</th>
+<th>總分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1101212311</td>
+<td>王小花</td>
+<td>69</td>
+<td>40</td>
+<td>60</td>
+<td class="total"></td>
+</tr>
+<tr>
+<td>1101212312</td>
+<td>王中花</td>
+<td>85</td>
+<td>75</td>
+<td>90</td>
+<td class="total"></td>
+</tr>
+<tr>
+<td>1101212313</td>
+<td>王大花</td>
+<td>75</td>
+<td>60</td>
+<td>85</td>
+<td class="total"></td>
+</tr>
+<tr>
+<td>1101212314</td>
+<td>陳小明</td>
+<td>80</td>
+<td>75</td>
+<td>80</td>
+<td class="total"></td>
+</tr>
+<tr>
+<td>1101212315</td>
+<td>張大明</td>
+<td>82</td>
+<td>78</td>
+<td>86</td>
+<td class="total"></td>
+</tr>
+</tbody>
+</table>
+
+<button onclick="calculateTotal()">計算總分</button>
+
+<script>
+function calculateTotal() {
+    var rows = document.querySelectorAll("tbody tr");
+    rows.forEach(function(row) {
+        var total = 0;
+        var scores = row.querySelectorAll("td:nth-child(n+3):nth-child(-n+5)");
+        scores.forEach(function(score) {
+            total += parseInt(score.textContent);
+        });
+        row.querySelector(".total").textContent = total;
+    });
+}
+</script>
+</body>
+</html>
