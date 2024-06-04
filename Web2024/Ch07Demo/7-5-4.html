@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"　content="width=device-width,  initial-scale=1.0, minimum-scale=0.8, maximum-scale=2.0, user-scalable=no" >
+	<title>Bootstrap 設定</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+　<div class="container">
+  <form>
+		<!-----------------日期選擇器------------------!-->
+		<div class="form-group">
+		  <label for="userBirthday">生日</label>
+		   <input type="date" class="form-control" id="userBirthday">
+		</div>
+		<!----------------多列文字輸入---------------------!-->
+		<div class="form-group">
+		  <label for="userIntro">自我介紹</label>
+		  <textarea class="form-control" rows="5" id="userIntro"></textarea>
+		</div>
+	    <!--------------Radio Button 單選題,多選一,圓圈圈  -->
+		<div class="radio">
+		  <input type="radio" name="gradutate" id="radio" value="高中以下程度">		
+          <label for="radio">高中(含以下)</label>
+			
+	      <input name="gradutate" type="radio" id="radio2" value="大學或專科" checked="checked">		
+          <label for="radio2">大專</label>
+			
+	      <input type="radio" name="gradutate" id="radio3" value="碩博士">
+          <label for="radio3"> 研究所(含以上) </label>			
+		</div>	  
+	    <!--------------checkbox 多選題,多選多,方塊打勾.  -->
+		<div class="checkbox">
+		  <p>
+			  <label>
+			    <input type="checkbox" name="interest" value="travel" id="interest_0">
+			    旅遊</label>
+			  <br>
+			  <label>
+			    <input type="checkbox" name="interest" value="reading" id="interest_1">
+			    閱讀</label>
+			  <br>
+			  <label>
+			    <input type="checkbox" name="interest" value="music" id="interest_2">
+			    音樂</label>
+			  <br>
+		  </p>
+        </div>
+	    <!--------------Radio Button 單選題,多選一,圓圈圈  -->
+		<div class="radio">
+		  <p>
+		    <label>
+		      <input type="radio" name="gender" value="male" id="gender_0">
+		      男生</label>
+		    <br>
+		    <label>
+		      <input type="radio" name="gender" value="female" id="gender_1">
+		      女生</label>
+		    <br>
+	      </p>
+        </div>
+		<!----------------下拉式選單---------------------!-->
+		<div class="form-group">
+		<select class="form-control" name="county" id="county">
+				<option value="1">基隆市 </option>
+				<option value="2">台北市 </option>
+				<option value="3">新北市</option>
+				<option value="4">桃園縣</option>
+				<option value="5">新竹市</option>
+				<option value="6">新竹縣</option>
+				<option value="7">苗栗縣</option>
+				<option value="8">台中市</option>
+				<option value="9">彰化縣</option>
+				<option value="10">南投縣</option>
+				<option value="11">雲林縣</option>
+				<option value="12">嘉義市</option>
+				<option value="13">嘉義縣</option>
+				<option value="14">台南市</option>
+				<option value="15">高雄市</option>
+				<option value="16">屏東縣</option>
+				<option value="17">台東縣</option>
+				<option value="18">花蓮縣</option>
+				<option value="19">宜蘭縣</option>
+				<option value="20">澎湖縣</option>
+				<option value="21">金門縣</option>
+				<option value="22">連江縣</option>
+        </select>
+
+	</div>	  
+	  
+    <!----------------送出按鈕---------------------!-->
+　      <button type="submit"  class="btn btn-primary">送出</button>
+		<button type="button" class="btn btn-default">預設標準按鈕</button>
+		<button type="button"  class="btn btn-primary">主要功能按鈕</button>
+		<button type="button" class="btn btn-success">正面意義按鈕</button>
+		<button type="button" class="btn btn-info">提供訊息按鈕</button>
+		<button type="button" class="btn btn-warning">警告按鈕</button>
+		<button type="button" class="btn btn-danger">危險按鈕</button>
+		<button type="button" class="btn btn-link">超連結按鈕</button>
+     <!----------------按鈕大小---------------------!-->
+      <hr>
+	  	<button type="button"  class="btn btn-primary btn-xs">特小</button>
+	  	<button type="button"  class="btn btn-primary btn-sm">小按鈕</button>
+	  	<button type="button"  class="btn btn-primary btn-lg">大按鈕</button>
+	  	 <button type="button"  class="btn btn-primary btn-block">横幅按鈕，與父元素同大</button>
+　  </form>
+ </div>
+</body>
+</html>
